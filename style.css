@@ -1,0 +1,190 @@
+:root {
+    --fontRegular: 'din-regular';
+    --fontBlack: 'din-black';
+    --fontBold: 'din-bold';
+    --primaryColor: #2E3848;
+    --secondaryColor: #5ED4FF;
+    --borderSpacing: 50px;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: var(--primaryColor);
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main__logo {
+    width: 180px;
+    margin-top: 40px;
+}
+
+.main__title {
+    width: 100%;
+    text-align: center;
+    font-size: 3.2em;
+    font-family: var(--fontBlack);
+    margin-top: 10px;
+    position: relative;
+}
+
+.main__title--newsletter {
+    font-size: .3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--secondaryColor);
+    font-family: var(--fontBold);
+}
+
+.main__title--newsletter:after {
+    content: '';
+    height: 1px;
+    width: 200px;
+    background-color: rgba(47, 56, 71, 0.32);
+    position: absolute;
+    bottom: calc(var(--borderSpacing) * -1);
+}
+
+.main__description {
+    text-align: center;
+    margin-top: var(--borderSpacing);
+    font-family: var(--fontRegular);
+}
+
+.main__description a {
+    color: var(--primaryColor);
+    font-family: var(--fontBold);
+}
+
+.main__description--complete {
+    margin: 0 15% 0 15%;
+}
+
+.main__description--brief {
+    margin: 15px 15% 15px 15%;
+}
+
+.main__actions {
+    width: 100%;
+    text-align: center;
+    margin-top: var(--borderSpacing);
+}
+
+.main__actions--email {
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    font-family: var(--fontRegular);
+    border: 2px solid rgba(47, 56, 71, 0.32);
+    font-size: 1.1em;
+    width: 280px;
+    color: var(--primaryColor);
+    text-align: center;
+}
+
+.main__actions--submit {
+    outline: none;
+    background-color: var(--secondaryColor);
+    color: #FFF;
+    padding: 10px 15px 10px 15px;
+    font-family: var(--fontRegular);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+    border: 2px solid var(--secondaryColor);
+    cursor: pointer;
+    will-change: background-color;
+    transition: background-color 200ms ease;
+}
+
+.main__actions--submit:hover {
+    background-color: transparent;
+    color: var(--secondaryColor);
+}
+
+/* Font Faces */
+@font-face {
+    font-family: 'din-regular';
+    src: url('./assets/fonts/hinted-DIN-RegularAlternate.eot');
+    src: local('DIN-RegularAlternate'),
+        url('./assets/fonts/hinted-DIN-RegularAlternate.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/hinted-DIN-RegularAlternate.woff2') format('woff2'),
+        url('./assets/fonts/hinted-DIN-RegularAlternate.woff') format('woff'),
+        url('./assets/fonts/hinted-DIN-RegularAlternate.ttf') format('truetype'),
+        url('./assets/fonts/hinted-DIN-RegularAlternate.svg#DIN-RegularAlternate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'din-bold';
+    src: url('./assets/fonts/hinted-DIN-Bold.eot');
+    src: local('DIN-Bold'),
+        url('./assets/fonts/hinted-DIN-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/hinted-DIN-Bold.woff2') format('woff2'),
+        url('./assets/fonts/hinted-DIN-Bold.woff') format('woff'),
+        url('./assets/fonts/hinted-DIN-Bold.ttf') format('truetype'),
+        url('./assets/fonts/hinted-DIN-Bold.svg#DIN-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'din-medium';
+    src: url('./assets/fonts/hinted-DIN-Medium.eot');
+    src: local('DIN-Medium'),
+        url('./assets/fonts/hinted-DIN-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/hinted-DIN-Medium.woff2') format('woff2'),
+        url('./assets/fonts/hinted-DIN-Medium.woff') format('woff'),
+        url('./assets/fonts/hinted-DIN-Medium.ttf') format('truetype'),
+        url('./assets/fonts/hinted-DIN-Medium.svg#DIN-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'din-regular';
+    src: url('./assets/fonts/hinted-DIN-Regular.eot');
+    src: local('DIN-Regular'),
+        url('./assets/fonts/hinted-DIN-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/hinted-DIN-Regular.woff2') format('woff2'),
+        url('./assets/fonts/hinted-DIN-Regular.woff') format('woff'),
+        url('./assets/fonts/hinted-DIN-Regular.ttf') format('truetype'),
+        url('./assets/fonts/hinted-DIN-Regular.svg#DIN-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'din-light';
+    src: url('./assets/fonts/hinted-DIN-Light.eot');
+    src: local('DIN-Light'),
+        url('./assets/fonts/hinted-DIN-Light.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/hinted-DIN-Light.woff2') format('woff2'),
+        url('./assets/fonts/hinted-DIN-Light.woff') format('woff'),
+        url('./assets/fonts/hinted-DIN-Light.ttf') format('truetype'),
+        url('./assets/fonts/hinted-DIN-Light.svg#DIN-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'din-black';
+    src: url('./assets/fonts/hinted-DIN-BlackAlternate.eot');
+    src: local('DIN-BlackAlternate'),
+        url('./assets/fonts/hinted-DIN-BlackAlternate.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/hinted-DIN-BlackAlternate.woff2') format('woff2'),
+        url('./assets/fonts/hinted-DIN-BlackAlternate.woff') format('woff'),
+        url('./assets/fonts/hinted-DIN-BlackAlternate.ttf') format('truetype'),
+        url('./assets/fonts/hinted-DIN-BlackAlternate.svg#DIN-BlackAlternate') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
