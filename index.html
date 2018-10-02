@@ -26,10 +26,19 @@
             </p>
         </div>
         <div class="main__actions">
-            <input type="email" class="main__actions--email" placeholder="Digite aqui seu e-mail"/>
-            <button class="main__actions--submit">Quero receber!</button>
+            <input type="email" class="main__actions--email" id="email" placeholder="Digite aqui seu e-mail"/>
+            <button class="main__actions--want-receive" id="want-receive">Quero receber!</button>
+            <span class="main__actions--content" id="message-content"></span>
+        </div>
+        <div class="main__additional" id="additional-section">
+            <span class="main__additional--text">Para nos comunicarmos melhor, qual seu nome completo?</span>
+            <div>
+                <input type="text" class="main__additional--name" id="name" placeholder="Digite aqui seu nome"/>
+                <button class="main__additional--submit" id="submit">Realizar assinatura</button>
+            </div>
         </div>
     </main>
 </body>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script src="./script.js"></script>
 </html>

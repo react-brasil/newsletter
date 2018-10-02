@@ -5,6 +5,8 @@
     --primaryColor: #2E3848;
     --secondaryColor: #5ED4FF;
     --borderSpacing: 50px;
+    --successColor: #46DA99;
+    --errorColor: #FD2231;
 }
 
 body,
@@ -81,9 +83,14 @@ html {
     width: 100%;
     text-align: center;
     margin-top: var(--borderSpacing);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.main__actions--email {
+.main__actions--email,
+.main__additional--name {
     outline: none;
     padding: 10px 15px 10px 15px;
     border-radius: 5px;
@@ -92,13 +99,16 @@ html {
     font-size: 1.1em;
     width: 280px;
     color: var(--primaryColor);
+    margin-right: 5px;
+}
+
+.main__actions--email {
     text-align: center;
 }
 
-.main__actions--submit {
+.main__actions--want-receive,
+.main__additional--submit {
     outline: none;
-    background-color: var(--secondaryColor);
-    color: #FFF;
     padding: 10px 15px 10px 15px;
     font-family: var(--fontRegular);
     border-radius: 5px;
@@ -110,8 +120,57 @@ html {
     transition: background-color 200ms ease;
 }
 
-.main__actions--submit:hover {
+.main__actions--want-receive {
+    background-color: var(--secondaryColor);
+    color: #FFF;
+}
+
+.main__additional--submit {
     background-color: transparent;
+    color: var(--secondaryColor);
+}
+
+.main__actions--want-receive:hover {
+    background-color: transparent;
+    color: var(--secondaryColor);
+}
+
+.main__additional--submit:hover {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.main__actions--content {
+    margin: 15px;
+    font-family: var(--fontRegular);
+    color: var(--successColor);
+    width: 100%;
+    font-size: .8em;
+}
+
+.main__additional {
+    position: absolute;
+    bottom: 0;
+    height: 140px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    will-change: transform;
+    transition: transform 100ms, opacity 200ms ease;
+    transform: translate(100%);
+}
+
+.main__additional--opened {
+    transform: translate(0);
+}
+
+.main__additional--text {
+    width: 100%;
+    text-align: center;
+    font-family: var(--fontRegular);
     color: var(--secondaryColor);
 }
 
