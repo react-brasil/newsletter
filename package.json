@@ -1,0 +1,8 @@
+{
+  "name": "newsletter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/react-brasil/newsletter.git",
+  "author": "React Brasil <reactbrasilnewsletter@gmail.com>",
+  "license": "MIT"
+}
