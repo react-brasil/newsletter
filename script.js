@@ -1,10 +1,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyB7i1nha2fRAiuXpnw4aYc35NfzHWuWWo0",
     authDomain: "react-brasil-newsletter.firebaseapp.com",
-    databaseURL: "https://react-brasil-newsletter.firebaseio.com",
     projectId: "react-brasil-newsletter",
-    storageBucket: "react-brasil-newsletter.appspot.com",
-    messagingSenderId: "356967590314"
 };
 
 const $email = document.getElementById('email');
