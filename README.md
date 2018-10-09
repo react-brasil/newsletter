@@ -13,3 +13,8 @@ Caso não esteja no Slack, é só **[entrar aqui](https://react-brasil.github.io
 # Quais notícias serão enviadas ?
 As notícias mais relevantes do mundo React
 
+______
+
+## Licença
+
+[MIT]
