@@ -91,6 +91,24 @@ window.onload = function() {
     $submit.addEventListener('click', handleClickSubmit);
     $email.addEventListener('keyup', handleKeyupEmail);
 
+    function convertToCSV(objArray) {
+        var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+        var str = '';
+
+        for (var i = 0; i < array.length; i++) {
+            var line = '';
+            for (var index in array[i]) {
+                if (line != '') line += ','
+
+                line += array[i][index];
+            }
+
+            str += line + '\r\n';
+        }
+
+        return str;
+    }
+
     const getAllEmails = () => {
         var emailsRef = db.collection("emails");
         return emailsRef.get();
@@ -101,13 +119,15 @@ window.onload = function() {
         emailList.forEach(doc => {
         jsonEmails.push(doc.data());
         });
+        
+        csvFile = convertToCSV(jsonEmails);
+        var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
 
-        var dataStr =
-        "data:text/json;charset=utf-8," +
-        encodeURIComponent(JSON.stringify(jsonEmails));
-
+        var url = URL.createObjectURL(blob);
+        
         var dlAnchorElem = document.getElementById("downloadAnchorElem");
-        dlAnchorElem.setAttribute("href", dataStr);
-        dlAnchorElem.setAttribute("download", "scene.json");
+
+        dlAnchorElem.setAttribute("href", url);
+        dlAnchorElem.setAttribute("download", "export.csv");
     });
 }
