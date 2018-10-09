@@ -18,3 +18,10 @@ ______
 ## Licença
 
 [MIT]
+
+## Core members
+
+[![Gabriel Ferreira](https://avatars1.githubusercontent.com/u/17201177?s=64&v=4)](https://github.com/gabrielferreiraa) | [![Bruno Russi](https://avatars1.githubusercontent.com/u/7950082?s=64&v=4)](https://github.com/brunoxd13)
+|---|---|
+| Gabriel Ferreira | Bruno Russi |
+| [@gabrielferreiraa](https://github.com/gabrielferreiraa) | [@brunoxd13](https://github.com/brunoxd13) |
