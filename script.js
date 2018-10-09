@@ -90,4 +90,24 @@ window.onload = function() {
     $wantReceive.addEventListener('click', handleClickToReceive);
     $submit.addEventListener('click', handleClickSubmit);
     $email.addEventListener('keyup', handleKeyupEmail);
+
+    const getAllEmails = () => {
+        var emailsRef = db.collection("emails");
+        return emailsRef.get();
+    };
+
+    getAllEmails().then(emailList => {
+        var jsonEmails = [];
+        emailList.forEach(doc => {
+        jsonEmails.push(doc.data());
+        });
+
+        var dataStr =
+        "data:text/json;charset=utf-8," +
+        encodeURIComponent(JSON.stringify(jsonEmails));
+
+        var dlAnchorElem = document.getElementById("downloadAnchorElem");
+        dlAnchorElem.setAttribute("href", dataStr);
+        dlAnchorElem.setAttribute("download", "scene.json");
+    });
 }
