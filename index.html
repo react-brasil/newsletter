@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,34 +12,32 @@
     <meta name="robots" content="index" />
     <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
     <main class="main">
         <img src="./assets/react-brasil.svg" class="main__logo" />
         <h1 class="main__title">React Brasil <span class="main__title--newsletter">NEWSLETTER</span></h1>
         <div class="main__description">
             <p class="main__description--brief">
-                Quer receber todas as novidades que estão rolando sobre 
+                Quer receber todas as novidades que estão rolando sobre
                 <a href="https://reactjs.org/" target="_blank">React</a>?
             </p>
             <p class="main__description--complete">
-                Serão enviadas as notícias mais relevantes do mundo React elencadas pela 
-                <a href="https://react-brasil.github.io/react-brasil-slack/" target="_blank">comunidade</a> uma vez por semana, não fique de fora dessa!
+                Serão enviadas as notícias mais relevantes do mundo React elencadas pela
+                <a href="https://react-brasil.github.io/react-brasil-slack/" target="_blank">comunidade</a> uma vez por semana,
+                não fique de fora dessa!
             </p>
         </div>
         <div class="main__actions">
-            <input type="email" class="main__actions--email" id="email" placeholder="Digite aqui seu e-mail"/>
-            <button class="main__actions--want-receive" id="want-receive">Quero receber!</button>
-            <span class="main__actions--content" id="message-content"></span>
-        </div>
-        <div class="main__additional" id="additional-section">
-            <span class="main__additional--text">Para nos comunicarmos melhor, qual seu nome completo?</span>
-            <div>
-                <input type="text" class="main__additional--name" id="name" placeholder="Digite aqui seu nome"/>
-                <button class="main__additional--submit" id="submit">Realizar assinatura</button>
-            </div>
+            <input type="text" class="main__additional--name" id="name" placeholder="Digite aqui seu nome" />
+            <input type="email" class="main__actions--email" id="email" placeholder="Digite aqui seu e-mail" />
+            <button class="main__additional--submit" id="submit">Realizar assinatura</button>
+            <span class="main__actions--success-content" id="message-sucsses-content"></span>
+            <span class="main__actions--error-content" id="message-error-content"></span>
         </div>
     </main>
 </body>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script src="./script.js"></script>
+
 </html>
